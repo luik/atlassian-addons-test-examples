@@ -1,0 +1,24 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="confluence_5_servlet"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="confluence_5_servlet-resources" name="confluence_5_servlet Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="confluence_5_servlet.css" location="/css/confluence_5_servlet.css"/>
+        <resource type="download" name="confluence_5_servlet.js" location="/js/confluence_5_servlet.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>confluence_5_servlet</context>
+    </web-resource>
+    
+</atlassian-plugin>
