@@ -20,5 +20,28 @@
 
         <context>confluence_2_bandana</context>
     </web-resource>
-    
+
+    <web-section key="test-section"
+                 location="system.admin" weight="500">
+        <label key="test-section.label" />
+    </web-section>
+
+    <web-item key="test-item" section="system.admin/test-section"
+              weight="40">
+        <label key="test-item.label" />
+        <link linkId="test-item.link">/admin/${project.artifactId}/test-action.action
+        </link>
+    </web-item>
+
+    <xwork key="test-actions">
+        <package extends="default" namespace="/admin/${project.artifactId}">
+            <default-interceptor-ref name="defaultStack" />
+            <param name="RequireSecurityToken">true</param>
+
+            <action name="test-action" class="com.milkneko.dev.confluence_2_bandana.TestAction">
+                <result name="success" type="velocity">/templates/test-template.vm</result>
+            </action>
+        </package>
+    </xwork>
+
 </atlassian-plugin>
