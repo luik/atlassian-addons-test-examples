@@ -1,4 +1,4 @@
-#commands
+# Commands
 
 Following were the commands used for build the add-on templates
 
