@@ -94,6 +94,7 @@
                         <!-- Add package to export here -->
                         <Export-Package>
                             com.milkneko.dev.confluence_3_admin_web_items.api,
+                            com.milkneko.dev.confluence_3_admin_web_items.bean,
                         </Export-Package>
 
                         <!-- Add package import here -->

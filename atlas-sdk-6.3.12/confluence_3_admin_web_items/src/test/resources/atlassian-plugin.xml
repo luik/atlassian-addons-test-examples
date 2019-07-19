@@ -7,8 +7,10 @@
 
     <!-- from our base plugin -->
     <component-import key="myComponent" interface="com.milkneko.dev.confluence_3_admin_web_items.api.MyPluginComponent"/>
+    <component-import key="storageComponent" interface="com.milkneko.dev.confluence_3_admin_web_items.api.StorageComponent"/>
 
     <!-- from the product container -->
     <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+    <component-import key="bandanaManager" interface="com.atlassian.bandana.BandanaManager" />
     
 </atlassian-plugin>

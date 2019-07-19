@@ -1,13 +1,15 @@
-You have successfully created an Atlassian Plugin!
+# Commands
 
-Here are the SDK commands you'll use immediately:
+For testing with integration test you would run them on a remote instance
 
-* atlas-run   -- installs this plugin into the product and starts it on localhost
-* atlas-debug -- same as atlas-run, but allows a debugger to attach at port 5005
-* atlas-cli   -- after atlas-run or atlas-debug, opens a Maven command line window:
-                 - 'pi' reinstalls the plugin into the running product instance
-* atlas-help  -- prints description for all commands in the SDK
+## Run another instance for running
 
-Full documentation is always available at:
+    atlas-run-standalone --product confluence -p 1992
+    # after it is running we need to disable a service using on online confluence page editing
+    curl -X POST --user admin:admin --header "X-Atlassian-Token: no-check" http://localhost:1990/confluence/rest/synchrony-interop/disable
 
-https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugin+SDK
+## Run integration test remotely
+
+    atlas-remote-test --server localhost -p 1992 --context-path confluence
+
+

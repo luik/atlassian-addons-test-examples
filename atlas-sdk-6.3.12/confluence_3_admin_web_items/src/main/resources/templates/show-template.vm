@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+<h2>A Velocity Test Template</h2>
+
+<h3>object</h3>
+<div>
+    <table>
+        <tr>
+            <td>id</td><td>$recordBean.id</td>
+        </tr>
+        <tr>
+            <td>date</td><td>$recordBean.value</td>
+        </tr>
+    </table>
+</div>
+
+
+
+</body>
+</html>

@@ -20,5 +20,38 @@
 
         <context>confluence_3_admin_web_items</context>
     </web-resource>
+
+    <web-section key="test-section"
+                 location="system.admin" weight="500">
+        <label key="test-section.label" />
+    </web-section>
+
+    <web-item key="test-item-view" section="system.admin/test-section"
+              weight="40">
+        <label key="test-item-view.label" />
+        <link linkId="test-item-view.link">/admin/${project.artifactId}/test-view-action.action
+        </link>
+    </web-item>
+
+    <web-item key="test-item-edit" section="system.admin/test-section"
+              weight="40">
+        <label key="test-item-edit.label" />
+        <link linkId="test-item-edit.link">/admin/${project.artifactId}/test-edit-action.action
+        </link>
+    </web-item>
+
+    <xwork key="test-actions">
+        <package extends="default" namespace="/admin/${project.artifactId}">
+            <default-interceptor-ref name="defaultStack" />
+            <param name="RequireSecurityToken">true</param>
+
+            <action name="test-view-action" class="com.milkneko.dev.confluence_3_admin_web_items.ViewAction">
+                <result name="success" type="velocity">/templates/show-template.vm</result>
+            </action>
+            <action name="test-edit-action" class="com.milkneko.dev.confluence_3_admin_web_items.EditAction">
+                <result name="success" type="velocity">/templates/edit-template.vm</result>
+            </action>
+        </package>
+    </xwork>
     
 </atlassian-plugin>

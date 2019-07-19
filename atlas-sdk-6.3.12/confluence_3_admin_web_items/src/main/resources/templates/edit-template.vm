@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Test</title>
+
+    <style>
+        label {
+            width: 100px;
+            display: inline-block;
+        }
+
+        input{
+            width: 250px;
+        }
+
+        div {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+
+<body>
+<h2>A Velocity Test Template</h2>
+
+<form method="post">
+
+    <input type="hidden" name="action" value="save" id="action" />
+
+    <div>
+        <label for="idField" >ID</label>
+        <input id="idField" name="idField" type="text" value="$recordBean.id">
+    </div>
+
+
+    <div>
+        <label for="valueField" >Value</label>
+        <input id="valueField" name="valueField" type="text" value="$recordBean.value">
+    </div>
+
+    <button type="submit">Save</button>
+</form>
+
+
+</body>
+</html>
