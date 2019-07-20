@@ -20,5 +20,8 @@
 
         <context>confluence_4_rest_service</context>
     </web-resource>
+
+    <rest key="test-rest" path="/test-rest" version="1.0">
+    </rest>
     
 </atlassian-plugin>

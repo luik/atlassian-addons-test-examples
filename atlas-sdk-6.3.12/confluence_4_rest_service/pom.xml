@@ -94,6 +94,9 @@
                         <!-- Add package to export here -->
                         <Export-Package>
                             com.milkneko.dev.confluence_4_rest_service.api,
+                            com.milkneko.dev.confluence_4_rest_service.bean,
+                            com.milkneko.dev.confluence_4_rest_service.rest,
+                            com.milkneko.dev.confluence_4_rest_service.rest.interchange_object,
                         </Export-Package>
 
                         <!-- Add package import here -->
