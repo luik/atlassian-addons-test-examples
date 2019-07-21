@@ -20,5 +20,10 @@
 
         <context>confluence_5_servlet</context>
     </web-resource>
-    
+
+  <servlet name="Servlet Test" i18n-name-key="servlet-test.name" key="servlet-test" class="com.milkneko.dev.confluence_5_servlet.servlet.ServletTest">
+    <description key="servlet-test.description">The Servlet Test Plugin</description>
+    <url-pattern>/servlet-test</url-pattern>
+  </servlet>
+
 </atlassian-plugin>
