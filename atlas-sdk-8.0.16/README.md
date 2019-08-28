@@ -25,8 +25,11 @@ We are going to change default http and ajp default ports
 
     atlas-run-standalone --product jira --server localhost -p 2992 -ajp 8011
     
-    # If you want to run in debug mode; It will start it listening debug port 5002 
+    # If you require to run in debug mode; It will start it listening debug port 5002 
     atlas-run-standalone --product jira --server localhost -p 2992 -ajp 8011 --jvmargs "-DdisableJiraEmail=false -Xdebug -Xrunjdwp:transport=dt_socket,address=5002,server=y,suspend=n"
+
+    # If you require a specific version (ex 7.13.6)
+    atlas-run-standalone --product jira --version 7.13.6 --server localhost -p 2992 -ajp 8011 --jvmargs "-DdisableJiraEmail=false -Xdebug -Xrunjdwp:transport=dt_socket,address=5002,server=y,suspend=n"
   
 
 ## Run integration tests remotely
