@@ -1,10 +1,20 @@
 # Commands
 
-## Add custom field module
+## Adding custom field module
 
     atlas-create-jira-plugin-module
 
-    >> ServletTest
-    >> com.milkneko.dev.confluence_5_servlet.servlet
+    >> Custom Field
+    >> MyCustomCalculatedField
+    >> com.milkneko.dev.jira_1_custom_field.custom_fields
     >> N
 
+## Adding custom field searcher module
+
+    atlas-create-jira-plugin-module
+    >> Custom Field Searcher
+    >> ExactNumberSearcher
+    >> com.milkneko.dev.jira_1_custom_field.custom_fields.my-custom-calculated-field
+
+After a custom field searcher is added you must reindex so it appears in Jira Issues Search
+    

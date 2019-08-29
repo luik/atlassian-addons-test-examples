@@ -1,6 +1,5 @@
 package com.milkneko.dev.jira_1_custom_field.custom_fields;
 
-import com.atlassian.plugin.spring.scanner.annotation.component.Scanned;
 import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +14,6 @@ import com.atlassian.jira.issue.fields.layout.field.FieldLayoutItem;
 import java.util.List;
 import java.util.Map;
 
-@Scanned
 public class MyCustomField extends TextCFType {
     private static final Logger log = LoggerFactory.getLogger(MyCustomField.class);
 

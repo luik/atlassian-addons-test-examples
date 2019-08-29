@@ -5,7 +5,6 @@ import com.atlassian.jira.issue.customfields.impl.AbstractCustomFieldType;
 import com.atlassian.jira.issue.customfields.impl.FieldValidationException;
 import com.atlassian.jira.issue.customfields.view.CustomFieldParams;
 import com.atlassian.jira.util.ErrorCollection;
-import com.atlassian.plugin.spring.scanner.annotation.component.Scanned;
 import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Set;
 
-@Scanned
 public class MyCustomCalculatedField extends AbstractCustomFieldType<String, String> {
     private static final Logger log = LoggerFactory.getLogger(MyCustomCalculatedField.class);
 

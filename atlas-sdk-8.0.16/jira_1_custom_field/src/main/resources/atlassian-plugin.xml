@@ -17,15 +17,22 @@
     <resource type="download" name="jira_1_custom_field.js" location="/js/jira_1_custom_field.js"/>  
     <resource type="download" name="images/" location="/images"/>  
     <context>jira_1_custom_field</context> 
-  </web-resource>  
+  </web-resource>
+
   <customfield-type name="My Custom Field" i18n-name-key="my-custom-field.name" key="my-custom-field" class="com.milkneko.dev.jira_1_custom_field.custom_fields.MyCustomField"> 
     <description key="my-custom-field.description">The My Custom Field Plugin</description>  
     <resource name="view" type="velocity" location="/templates/customfields/my-custom-field/view.vm"/>  
     <resource name="edit" type="velocity" location="/templates/customfields/my-custom-field/edit.vm"/> 
   </customfield-type>  
-  <customfield-type name="My Custom Calculated Field" i18n-name-key="my-custom-calculated-field.name" key="my-custom-calculated-field" class="com.milkneko.dev.jira_1_custom_field.custom_fields.MyCustomCalculatedField">
-    <description key="my-custom-calculated-field.description">The My Custom Calculated Field Plugin</description>  
+  <customfield-type name="My Custom Calculated Field" i18n-name-key="my-custom-calculated-field.name" key="my-custom-calculated-field" class="com.milkneko.dev.jira_1_custom_field.custom_fields.MyCustomCalculatedField"> 
+    <description key="my-custom-calculated-field.description">The My Custom Calculated Field Plugin</description>
+    <valid-searcher package="${atlassian.plugin.key}" key="exact-number-searcher" />
     <resource name="view" type="velocity" location="/templates/customfields/my-custom-calculated-field/view.vm"/>  
     <resource name="edit" type="velocity" location="/templates/customfields/my-custom-calculated-field/edit.vm"/> 
-  </customfield-type>
+  </customfield-type>  
+  <customfield-searcher name="Exact Number Searcher" i18n-name-key="exact-number-searcher.name" key="exact-number-searcher" class="com.atlassian.jira.issue.customfields.searchers.ExactNumberSearcher"> 
+    <description key="exact-number-searcher.description">The Exact Number Searcher Plugin</description>  
+    <valid-customfield-type package="${atlassian.plugin.key}" key="my-custom-calculated-field"/>
+    <resource name="search" type="velocity" location="/templates/customfields/exact-number-searcher/search.vm"/> 
+  </customfield-searcher>
 </atlassian-plugin>
