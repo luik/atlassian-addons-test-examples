@@ -3,9 +3,6 @@ package ut.com.milkneko.dev.jira_1_custom_field.custom_fields;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import com.milkneko.dev.jira_1_custom_field.custom_fields.MyCustomField;
-
-import static org.mockito.Mockito.*;
 
 /**
  * @since 3.5
