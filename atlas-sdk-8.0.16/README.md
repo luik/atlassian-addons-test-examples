@@ -6,6 +6,8 @@ Following commands were used to build add-on templates
 
     atlas-create-jira-plugin -g com.milkneko.dev -a jira_2_custom_searcher -v 1.0.0-SNAPSHOT -p com.milkneko.dev.jira_2_custom_searcher --non-interactive
 
+    atlas-create-jira-plugin -g com.milkneko.dev -a jira_3_rest_service -v 1.0.0-SNAPSHOT -p com.milkneko.dev.jira_3_rest_service --non-interactive
+
 
 
 If you are using IntelliJ, you need to change Maven installation directory on project settings, and after maven depencies import finish you will need to restart IntelliJ

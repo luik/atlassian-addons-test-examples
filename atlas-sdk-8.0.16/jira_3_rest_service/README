@@ -1,0 +1,12 @@
+# Commands
+
+## Adding custom field module
+
+    atlas-create-jira-plugin-module
+
+    >> REST Plugin Module
+    >> MyRestResource
+    >> com.milkneko.dev.jira_3_rest_service.rest
+    >> /myrestresource
+    >> 1.0
+    >> N
