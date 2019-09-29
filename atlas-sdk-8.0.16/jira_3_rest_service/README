@@ -10,3 +10,8 @@
     >> /myrestresource
     >> 1.0
     >> N
+
+
+## to run with Jacoco code coverage
+
+    atlas-mvn clean integration-test jacoco:report
