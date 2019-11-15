@@ -10,6 +10,9 @@ Following commands were used to build add-on templates
 
     atlas-create-jira-plugin -g com.milkneko.dev -a jira_4_servlet -v 1.0.0-SNAPSHOT -p com.milkneko.dev.jira_4_servlet --non-interactive
 
+    atlas-create-jira-plugin -g com.milkneko.dev -a jira_5_workflow_condition -v 1.0.0-SNAPSHOT -p com.milkneko.dev.jira_5_workflow_condition --non-interactive
+
+    atlas-create-jira-plugin -g com.milkneko.dev -a jira_6_workflow_validator -v 1.0.0-SNAPSHOT -p com.milkneko.dev.jira_5_workflow_validator --non-interactive
 
 
 If you are using IntelliJ, you need to change Maven installation directory on project settings, and after maven depencies import finish you will need to restart IntelliJ

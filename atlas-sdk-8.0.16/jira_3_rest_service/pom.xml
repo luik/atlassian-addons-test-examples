@@ -133,6 +133,8 @@
                 <configuration>
                     <includes>
                         <include>com/milkneko/dev/jira_3_rest_service/**</include>
+                        <include>it/com/milkneko/dev/jira_3_rest_service/**</include>
+                        <include>ut/com/milkneko/dev/jira_3_rest_service/**</include>
                     </includes>
                 </configuration>
                 <executions>
