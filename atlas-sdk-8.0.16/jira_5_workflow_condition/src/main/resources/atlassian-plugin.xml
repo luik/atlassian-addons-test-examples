@@ -1,24 +1,28 @@
-<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
-    <plugin-info>
-        <description>${project.description}</description>
-        <version>${project.version}</version>
-        <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
-    </plugin-info>
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="jira_5_workflow_condition"/>
-    
-    <!-- add our web resources -->
-    <web-resource key="jira_5_workflow_condition-resources" name="jira_5_workflow_condition Web Resources">
-        <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
-        <resource type="download" name="jira_5_workflow_condition.css" location="/css/jira_5_workflow_condition.css"/>
-        <resource type="download" name="jira_5_workflow_condition.js" location="/js/jira_5_workflow_condition.js"/>
-        <resource type="download" name="images/" location="/images"/>
-
-        <context>jira_5_workflow_condition</context>
-    </web-resource>
-    
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2"> 
+  <plugin-info> 
+    <description>${project.description}</description>  
+    <version>${project.version}</version>  
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>  
+    <param name="plugin-icon">images/pluginIcon.png</param>  
+    <param name="plugin-logo">images/pluginLogo.png</param> 
+  </plugin-info>  
+  <!-- add our i18n resource -->  
+  <resource type="i18n" name="i18n" location="jira_5_workflow_condition"/>  
+  <!-- add our web resources -->  
+  <web-resource key="jira_5_workflow_condition-resources" name="jira_5_workflow_condition Web Resources"> 
+    <dependency>com.atlassian.auiplugin:ajs</dependency>  
+    <resource type="download" name="jira_5_workflow_condition.css" location="/css/jira_5_workflow_condition.css"/>  
+    <resource type="download" name="jira_5_workflow_condition.js" location="/js/jira_5_workflow_condition.js"/>  
+    <resource type="download" name="images/" location="/images"/>  
+    <context>jira_5_workflow_condition</context> 
+  </web-resource>  
+  <workflow-condition key="my-workflow-condition" name="My Workflow Condition" i18n-name-key="my-workflow-condition.name" class="com.milkneko.dev.jira_5_workflow_condition.workflow.MyWorkflowConditionFactory"> 
+    <description key="my-workflow-condition.description">The My Workflow Condition Plugin</description>  
+    <condition-class>com.milkneko.dev.jira_5_workflow_condition.workflow.MyWorkflowCondition</condition-class>  
+    <resource type="velocity" name="view" location="templates/conditions/my-workflow-condition.vm"/>  
+    <resource type="velocity" name="input-parameters" location="templates/conditions/my-workflow-condition-input.vm"/>  
+    <resource type="velocity" name="edit-parameters" location="templates/conditions/my-workflow-condition-input.vm"/> 
+  </workflow-condition>
 </atlassian-plugin>
