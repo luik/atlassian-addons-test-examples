@@ -1,9 +1,9 @@
-package com.milkneko.dev.jira_5_workflow_validator.impl;
+package com.milkneko.dev.jira_6_workflow_validator.workflow.impl;
 
 import com.atlassian.plugin.spring.scanner.annotation.export.ExportAsService;
 import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 import com.atlassian.sal.api.ApplicationProperties;
-import com.milkneko.dev.jira_5_workflow_validator.api.MyPluginComponent;
+import com.milkneko.dev.jira_6_workflow_validator.workflow.api.MyPluginComponent;
 
 import javax.inject.Inject;
 import javax.inject.Named;

@@ -1,9 +1,9 @@
-package it.com.milkneko.dev.jira_5_workflow_validator;
+package it.com.milkneko.dev.jira_6_workflow_validator;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import com.atlassian.plugins.osgi.test.AtlassianPluginsTestRunner;
-import com.milkneko.dev.jira_5_workflow_validator.api.MyPluginComponent;
+import com.milkneko.dev.jira_6_workflow_validator.workflow.api.MyPluginComponent;
 import com.atlassian.sal.api.ApplicationProperties;
 
 import static org.junit.Assert.assertEquals;

@@ -15,7 +15,7 @@ public class MyWorkflowValidator implements Validator
 
     public void validate(Map transientVars, Map args, PropertySet ps) throws InvalidInputException
     {
-        String word = (String)transientVars.get(FIELD_WORD);
+        String word = (String)args.get(FIELD_WORD);
         Issue issue = (Issue)transientVars.get("issue");
         String description = issue.getDescription();
 

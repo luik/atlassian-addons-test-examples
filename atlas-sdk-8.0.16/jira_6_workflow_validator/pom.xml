@@ -126,7 +126,7 @@
                     <instructions>
                         <Atlassian-Plugin-Key>${atlassian.plugin.key}</Atlassian-Plugin-Key>
                         <!-- Add package to export here -->
-                        <Export-Package>com.milkneko.dev.jira_5_workflow_validator.api,</Export-Package>
+                        <Export-Package>com.milkneko.dev.jira_6_workflow_validator.workflow.api,</Export-Package>
                         <!-- Add package import here -->
                         <Import-Package>org.springframework.osgi.*;resolution:="optional", org.eclipse.gemini.blueprint.*;resolution:="optional", *</Import-Package>
                         <!-- Ensure plugin is spring powered -->
