@@ -1,11 +1,11 @@
-You have successfully created an Atlassian Plugin!
+# Commands
 
-Here are the SDK commands you'll use immediately:
+## Adding custom field module
 
-* atlas-run   -- installs this plugin into the product and starts it on localhost
-* atlas-debug -- same as atlas-run, but allows a debugger to attach at port 5005
-* atlas-help  -- prints description for all commands in the SDK
+    atlas-create-jira-plugin-module
 
-Full documentation is always available at:
+    >> Workflow Validator
+    >> MyWorkflowValidator
+    >> com.milkneko.dev.jira_6_workflow_validator.workflow
+    >> N
 
-https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugin+SDK

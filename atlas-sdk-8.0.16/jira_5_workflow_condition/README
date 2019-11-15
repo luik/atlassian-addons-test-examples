@@ -8,7 +8,3 @@
     >> MyWorkflowCondition
     >> com.milkneko.dev.jira_5_workflow_condition.workflow
     >> N
-
-## to run with Jacoco code coverage
-
-#    atlas-mvn clean integration-test jacoco:report

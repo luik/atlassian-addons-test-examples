@@ -1,24 +1,28 @@
-<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
-    <plugin-info>
-        <description>${project.description}</description>
-        <version>${project.version}</version>
-        <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
-    </plugin-info>
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="jira_6_workflow_validator"/>
-    
-    <!-- add our web resources -->
-    <web-resource key="jira_6_workflow_validator-resources" name="jira_6_workflow_validator Web Resources">
-        <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
-        <resource type="download" name="jira_6_workflow_validator.css" location="/css/jira_6_workflow_validator.css"/>
-        <resource type="download" name="jira_6_workflow_validator.js" location="/js/jira_6_workflow_validator.js"/>
-        <resource type="download" name="images/" location="/images"/>
-
-        <context>jira_6_workflow_validator</context>
-    </web-resource>
-    
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2"> 
+  <plugin-info> 
+    <description>${project.description}</description>  
+    <version>${project.version}</version>  
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>  
+    <param name="plugin-icon">images/pluginIcon.png</param>  
+    <param name="plugin-logo">images/pluginLogo.png</param> 
+  </plugin-info>  
+  <!-- add our i18n resource -->  
+  <resource type="i18n" name="i18n" location="jira_6_workflow_validator"/>  
+  <!-- add our web resources -->  
+  <web-resource key="jira_6_workflow_validator-resources" name="jira_6_workflow_validator Web Resources"> 
+    <dependency>com.atlassian.auiplugin:ajs</dependency>  
+    <resource type="download" name="jira_6_workflow_validator.css" location="/css/jira_6_workflow_validator.css"/>  
+    <resource type="download" name="jira_6_workflow_validator.js" location="/js/jira_6_workflow_validator.js"/>  
+    <resource type="download" name="images/" location="/images"/>  
+    <context>jira_6_workflow_validator</context> 
+  </web-resource>  
+  <workflow-validator key="my-workflow-validator" name="My Workflow Validator" i18n-name-key="my-workflow-validator.name" class="com.milkneko.dev.jira_6_workflow_validator.workflow.MyWorkflowValidatorFactory"> 
+    <description key="my-workflow-validator.description">The My Workflow Validator Plugin</description>  
+    <validator-class>com.milkneko.dev.jira_6_workflow_validator.workflow.MyWorkflowValidator</validator-class>  
+    <resource type="velocity" name="view" location="templates/validators/my-workflow-validator.vm"/>  
+    <resource type="velocity" name="input-parameters" location="templates/validators/my-workflow-validator-input.vm"/>  
+    <resource type="velocity" name="edit-parameters" location="templates/validators/my-workflow-validator-input.vm"/> 
+  </workflow-validator>
 </atlassian-plugin>
